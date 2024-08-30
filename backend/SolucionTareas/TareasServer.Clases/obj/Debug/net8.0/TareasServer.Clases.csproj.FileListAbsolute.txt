@@ -1,0 +1,11 @@
+G:\proyecto-dante\repos\tareas_pendientes\david_rodriguez\backend\SolucionTareas\TareasServer.Clases\bin\Debug\net8.0\TareasServer.Clases.deps.json
+G:\proyecto-dante\repos\tareas_pendientes\david_rodriguez\backend\SolucionTareas\TareasServer.Clases\bin\Debug\net8.0\TareasServer.Clases.dll
+G:\proyecto-dante\repos\tareas_pendientes\david_rodriguez\backend\SolucionTareas\TareasServer.Clases\bin\Debug\net8.0\TareasServer.Clases.pdb
+G:\proyecto-dante\repos\tareas_pendientes\david_rodriguez\backend\SolucionTareas\TareasServer.Clases\obj\Debug\net8.0\TareasServer.Clases.GeneratedMSBuildEditorConfig.editorconfig
+G:\proyecto-dante\repos\tareas_pendientes\david_rodriguez\backend\SolucionTareas\TareasServer.Clases\obj\Debug\net8.0\TareasServer.Clases.AssemblyInfoInputs.cache
+G:\proyecto-dante\repos\tareas_pendientes\david_rodriguez\backend\SolucionTareas\TareasServer.Clases\obj\Debug\net8.0\TareasServer.Clases.AssemblyInfo.cs
+G:\proyecto-dante\repos\tareas_pendientes\david_rodriguez\backend\SolucionTareas\TareasServer.Clases\obj\Debug\net8.0\TareasServer.Clases.csproj.CoreCompileInputs.cache
+G:\proyecto-dante\repos\tareas_pendientes\david_rodriguez\backend\SolucionTareas\TareasServer.Clases\obj\Debug\net8.0\TareasServer.Clases.dll
+G:\proyecto-dante\repos\tareas_pendientes\david_rodriguez\backend\SolucionTareas\TareasServer.Clases\obj\Debug\net8.0\refint\TareasServer.Clases.dll
+G:\proyecto-dante\repos\tareas_pendientes\david_rodriguez\backend\SolucionTareas\TareasServer.Clases\obj\Debug\net8.0\TareasServer.Clases.pdb
+G:\proyecto-dante\repos\tareas_pendientes\david_rodriguez\backend\SolucionTareas\TareasServer.Clases\obj\Debug\net8.0\ref\TareasServer.Clases.dll

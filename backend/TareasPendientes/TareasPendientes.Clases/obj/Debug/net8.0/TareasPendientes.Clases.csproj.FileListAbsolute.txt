@@ -1,0 +1,11 @@
+G:\proyecto-dante\repos\tareas_pendientes\david_rodriguez\backend\TareasPendientes\TareasPendientes.Clases\bin\Debug\net8.0\TareasPendientes.Clases.deps.json
+G:\proyecto-dante\repos\tareas_pendientes\david_rodriguez\backend\TareasPendientes\TareasPendientes.Clases\bin\Debug\net8.0\TareasPendientes.Clases.dll
+G:\proyecto-dante\repos\tareas_pendientes\david_rodriguez\backend\TareasPendientes\TareasPendientes.Clases\bin\Debug\net8.0\TareasPendientes.Clases.pdb
+G:\proyecto-dante\repos\tareas_pendientes\david_rodriguez\backend\TareasPendientes\TareasPendientes.Clases\obj\Debug\net8.0\TareasPendientes.Clases.GeneratedMSBuildEditorConfig.editorconfig
+G:\proyecto-dante\repos\tareas_pendientes\david_rodriguez\backend\TareasPendientes\TareasPendientes.Clases\obj\Debug\net8.0\TareasPendientes.Clases.AssemblyInfoInputs.cache
+G:\proyecto-dante\repos\tareas_pendientes\david_rodriguez\backend\TareasPendientes\TareasPendientes.Clases\obj\Debug\net8.0\TareasPendientes.Clases.AssemblyInfo.cs
+G:\proyecto-dante\repos\tareas_pendientes\david_rodriguez\backend\TareasPendientes\TareasPendientes.Clases\obj\Debug\net8.0\TareasPendientes.Clases.csproj.CoreCompileInputs.cache
+G:\proyecto-dante\repos\tareas_pendientes\david_rodriguez\backend\TareasPendientes\TareasPendientes.Clases\obj\Debug\net8.0\TareasPendientes.Clases.dll
+G:\proyecto-dante\repos\tareas_pendientes\david_rodriguez\backend\TareasPendientes\TareasPendientes.Clases\obj\Debug\net8.0\refint\TareasPendientes.Clases.dll
+G:\proyecto-dante\repos\tareas_pendientes\david_rodriguez\backend\TareasPendientes\TareasPendientes.Clases\obj\Debug\net8.0\TareasPendientes.Clases.pdb
+G:\proyecto-dante\repos\tareas_pendientes\david_rodriguez\backend\TareasPendientes\TareasPendientes.Clases\obj\Debug\net8.0\ref\TareasPendientes.Clases.dll

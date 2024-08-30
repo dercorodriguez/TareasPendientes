@@ -1,0 +1,90 @@
+﻿@page "/tareas"
+
+
+@using CurrieTechnologies.Razor.SweetAlert2;
+@using Tareas.Cliente.Services
+@using TareasServer.Clases
+
+@inject SweetAlertService SwaI;
+@inject ITareaServices tareaService;
+
+<h3>Tareas</h3>
+
+<a class="btn btn-success btn-sm mb-3" href="tarea">Nueva Tarea</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Titulo</th>
+            <th>Descripción</th>
+            <th>Fecha Creación</th>
+            <th>Fecha Venximiento</th>
+            <th>Completada</th>
+            <th>Estado</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (listaTareas == null)
+        {
+            <tr>
+                <td colspan="5" align="center">
+                    <img style="width:50px" src="" />
+                </td>
+                <td></td>
+            </tr>
+        }
+        else
+        {
+            @foreach(var item in listaTareas)
+            {
+                <tr>
+                    <td>@item.Titulo</td>
+                    <td>@item.Descripcion</td>
+                    <td>@item.Fecha_Creacion.ToString("dd/MM/yyyy hh:mm:ss")</td>
+                    <td>@item.Fecha_Vencimiento.ToString("dd/MM/yyyy hh:mm:ss")</td>
+                    <td>@item.Completada</td>
+                    <td>@item.Estado</td>
+                    <td>
+                        <a class="btn btn-primary btn-sm" href="tarea/@item.Id">
+                            <i class="oi oi-pencil"></i>Editar
+                            </a>
+                        <button type="button" class="btn btn-danger btn-sm ms-2" @onclick="(() => Eliminar(item.Id))">
+                            <i class="oi oi-trash"></i>Eliminar
+                        </button>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+
+@code {
+    List<TareasDA>? listaTareas = null;
+
+    protected override async Task OnInitializedAsync()
+    {
+        listaTareas = await tareaService.Lista();
+    }
+
+    private async Task Eliminar(int id)
+    {
+        var resultado = await SwaI.FireAsync(new SweetAlertOptions
+            {
+                Title = "Eliminar Tarea",
+                Text = "Deseas eliminar la tarea ?",
+                Icon = SweetAlertIcon.Question,
+                ShowCancelButton = true
+            });
+
+        if (resultado.IsConfirmed)
+        {
+            var eliminado = await tareaService.Eliminar(id);
+            if (eliminado)
+            {
+                listaTareas = listaTareas!.FindAll(e => e.Id != id);
+            }
+
+        }
+    }
+
+}

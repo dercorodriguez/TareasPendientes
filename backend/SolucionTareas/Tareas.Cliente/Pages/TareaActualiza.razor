@@ -1,0 +1,97 @@
+﻿@page "/tarea"
+@page "/tarea/{idTareaEditar:int}"
+
+@using Tareas.Cliente.Services
+@using TareasServer.Clases
+
+@inject ITareaServices tareaService;
+@inject NavigationManager navegacion;
+
+<h3>@mtitulo</h3>
+
+<EditForm Model="otareas" OnValidSubmit="OnValidSubmit">
+    <DataAnnotationsValidator></DataAnnotationsValidator>
+    <div class="mb-3">
+        <label class="form-label">Titulo</label>
+        <InputText class="form-control" @bind-Value="otareas.Titulo"></InputText>
+        <ValidationMessage For="@(() => otareas.Titulo)"></ValidationMessage>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Descripción</label>
+        <InputText class="form-control" @bind-Value="otareas.Descripcion"></InputText>
+        <ValidationMessage For="@(() => otareas.Descripcion)"></ValidationMessage>
+
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Fecha Creación</label>
+        <InputDate class="form-control" @bind-Value="otareas.Fecha_Creacion"></InputDate>
+        <ValidationMessage For="@(() => otareas.Fecha_Creacion)"></ValidationMessage>
+
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Fecha Vencimiento</label>
+        <InputDate class="form-control" @bind-Value="otareas.Fecha_Vencimiento"></InputDate>
+        <ValidationMessage For="@(() => otareas.Fecha_Vencimiento)"></ValidationMessage>
+
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Estado</label>
+        <InputSelect class="form-control" @bind-Value="otareas.Estado">
+            <option value="A">Activo</option>
+            <option value="I">Inactivo</option>
+        </InputSelect>
+        <ValidationMessage For="@(() => otareas.Estado)"></ValidationMessage>
+    </div>
+
+    <button class="btn btn-primary" type="submit">
+        @btnTexto
+    </button>
+    <a class="btn btn-warning" href="tareas">Cancelar</a>
+
+</EditForm>
+
+@code {
+    [Parameter]
+    public int idTareaEditar { get; set; } = 0;
+
+    string mtitulo = string.Empty;
+    string btnTexto = string.Empty;
+
+    TareasDA otareas = new TareasDA();
+
+    protected override async Task OnInitializedAsync()
+    {
+        if (idTareaEditar != 0)
+        {
+            otareas = await tareaService.Buscar(idTareaEditar);
+            btnTexto = "Actualizar Tarea";
+            mtitulo = "Editar Tarea";
+        }
+        else
+        {
+            otareas.Fecha_Creacion = DateTime.Today;
+            btnTexto = "Guardar Tarea";
+            mtitulo = "Nueva Tarea";
+        }
+    }
+
+    private async Task OnValidSubmit()
+    {
+        int idDevuelto = 0;
+
+        if (idTareaEditar == 0)
+        {
+            idDevuelto = await tareaService.Guardar(otareas);
+        }
+        else
+        {
+            idDevuelto = await tareaService.Editar(otareas);
+        }
+
+        if (idDevuelto != 0)
+        {
+            navegacion.NavigateTo("/tareas");
+        }
+    }
+
+}

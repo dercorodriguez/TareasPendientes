@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "TareasPendientes.Clases/1.0.0": {
+        "runtime": {
+          "TareasPendientes.Clases.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "TareasPendientes.Clases/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
